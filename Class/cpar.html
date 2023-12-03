@@ -1,0 +1,408 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="icon" href="/favicon.ico">
+    <title>Project Athena</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../static.divinitor.com/site/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../../static.divinitor.com/site/fav/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../static.divinitor.com/site/fav/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://static.divinitor.com/site/fav/manifest.json">
+    <meta name="theme-color" content="#131315">
+    <meta property="og:site_name" content="Divinitor Minerva | DN Reference">
+    <meta property="og:image" content="../../divinitor.com/resources/img/dv-logo.png">
+    <meta property="og:title" content="Dragon Nest Reference">
+    <meta property="og:description" content="Reference information for Dragon Nest">
+    <link href="../../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+    <style>
+      html {
+        background-color: #131315;
+      }
+
+      .header,
+      .copyright {
+        display: none;
+      }
+
+      .startup {
+        color: white;
+        font-family: Lato, "Segoe UI", Tahoma, Verdana, sans-serif;
+        font-weight: normal;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        /* margin-right: calc(100vw - 100%); */
+        opacity: 1.0;
+        z-index: 300;
+        background-color: #131315;
+      }
+
+      .startup.hidden {
+        opacity: 0;
+        transition: opacity ease-in 0.5s;
+      }
+
+      .startup>.container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: normal;
+        padding: 0;
+        margin: 0;
+        text-transform: uppercase;
+        border-left: 4px solid #98BCD4;
+        padding: 8px 16px;
+        animation: 0.5s ease-in 0s 1 startup-fade-in;
+      }
+
+      .startup>.container>.title {
+        font-weight: normal;
+        padding: 0;
+        margin: 0;
+        letter-spacing: 0.3em;
+        color: #98BCD4;
+        font-size: 48px;
+      }
+
+      .startup>.container>.sub {
+        letter-spacing: 0.3em;
+        padding-left: 3px;
+        color: #3B6E96;
+      }
+
+      .startup>.container>.detail {
+        margin-top: 10px;
+        padding-left: 3px;
+        letter-spacing: 0.4em;
+        animation: 2s linear 0s infinite startup-pulse;
+      }
+
+      @keyframes startup-fade-in {
+        0% {
+          opacity: 0.0;
+        }
+
+        100% {
+          opacity: 1.0;
+        }
+      }
+
+      @keyframes startup-pulse {
+        0% {
+          color: #3D4B54;
+        }
+
+        50% {
+          color: #69899c;
+        }
+
+        100% {
+          color: #3D4B54;
+        }
+      }
+    </style>
+    <script>
+      window.STATIC_REGION = {};
+      window.STATIC_TEST_REGION = {};
+    </script>
+    <link href="/css/auth.a96bf1eb.css" rel="prefetch">
+    <link href="/css/items.80be8f48.css" rel="prefetch">
+    <link href="/css/items~old-items.5844a7b9.css" rel="prefetch">
+    <link href="/css/jobs.02ac6471.css" rel="prefetch">
+    <link href="/css/jobs~monsters~old-items~skills.01b5c2f1.css" rel="prefetch">
+    <link href="/css/maps.d1c18221.css" rel="prefetch">
+    <link href="/css/monsters.2df40028.css" rel="prefetch">
+    <link href="/css/monsters~skills.e1353816.css" rel="prefetch">
+    <link href="/css/old-items.08bc374f.css" rel="prefetch">
+    <link href="/css/resources.af7ffcdd.css" rel="prefetch">
+    <link href="/css/skills.de9501d3.css" rel="prefetch">
+    <link href="/css/text.75a1bb82.css" rel="prefetch">
+    <link href="/js/auth.3b0529c2.js" rel="prefetch">
+    <link href="/js/items.a1484ca2.js" rel="prefetch">
+    <link href="/js/items~old-items.bbb18565.js" rel="prefetch">
+    <link href="/js/items~old-items~skills.2c4dafa6.js" rel="prefetch">
+    <link href="/js/jobs.13b09b67.js" rel="prefetch">
+    <link href="/js/jobs~monsters~old-items~skills.8b65ed17.js" rel="prefetch">
+    <link href="/js/maps.bc89a9ae.js" rel="prefetch">
+    <link href="/js/monsters.f9fcf636.js" rel="prefetch">
+    <link href="/js/monsters~skills.d6a767c5.js" rel="prefetch">
+    <link href="/js/old-items.8b2b03b7.js" rel="prefetch">
+    <link href="/js/resources.921c2ea3.js" rel="prefetch">
+    <link href="/js/skills.b31c71ec.js" rel="prefetch">
+    <link href="/js/text.2252d9c6.js" rel="prefetch">
+    <link href="/css/chunk-common.0c7f0869.css" rel="preload" as="style">
+    <link href="/css/index.676e30b0.css" rel="preload" as="style">
+    <link href="/js/chunk-common.552368d4.js" rel="preload" as="script">
+    <link href="/js/chunk-vendors.09a054db.js" rel="preload" as="script">
+    <link href="/js/index.3e0e286a.js" rel="preload" as="script">
+    <link href="../../reference.dn.divinitor.com/css/chunk-common.0c7f0869.css" rel="stylesheet">
+    <link href="../../reference.dn.divinitor.com/css/index.676e30b0.css" rel="stylesheet">
+  <script charset="utf-8" src="/js/jobs~monsters~old-items~skills.8b65ed17.js"></script><script charset="utf-8" src="/js/jobs.13b09b67.js"></script></head>
+  <body>
+    <noscript>
+      <strong>We're sorry but reference.dn.divinitor.com doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div class="startup hidden" id="startup-shade">
+      <div class="container">
+        <div class="sub">Divinitor</div>
+        <div class="title">Minerva</div>
+        <div class="detail">Now loading</div>
+      </div>
+    </div>
+    <div id="app">
+        <div class="site-header">
+          <div class="header-left">
+            <a href="/" class="header-link router-link-exact-active router-link-active">
+              <h1>Project Athena</h1>
+              <div class="subtitle">SEMI AUTOMATED E-LIBRARY</div>
+              <!---->
+            </a>
+          </div>
+          <div class="mobile-header-right mobile-only">
+            <div data-v-1739f80a="" class="nav">
+              <div data-v-1739f80a="" class="mobile-hide">
+                <h1 data-v-1739f80a="">Navigation</h1>
+                <ul data-v-1739f80a="">
+                  <a data-v-1739f80a="" href="/" class="">
+                    <li data-v-1739f80a="">Home</li>
+                  </a>
+                </a>
+                <a data-v-1739f80a="" href="/Class/class.html" class="router-link-exact-active router-link-active">
+                  <li data-v-1739f80a="">Classes</li>
+                </a>
+                </a>
+                <a data-v-1739f80a="" href="/videos" class="">
+                  <li data-v-1739f80a="">Videos</li>
+                </a>
+                <a data-v-1739f80a="" href="/skills/skillSim" class="">
+                  <li data-v-1739f80a="" class="new">Skill Sim (BETA)</li>
+                </a>
+                <a data-v-1739f80a="" href="/resources" class="">
+                  <li data-v-1739f80a="">Resources</li>
+                </a>
+                </ul>
+                <div data-v-1739f80a="" class="related-links">
+                  <!---->
+                  <div data-v-1739f80a="" class="link">
+                    <a data-v-1739f80a="" href="https://fatduckdn.com/" target="_blank">Home</a>
+                  </div>
+                  <div data-v-1739f80a="" class="link">
+                    <a data-v-1739f80a="" href="https://discord.gg/XFcyMqE" target="_blank">Discord</a>
+                  </div>
+                  <div data-v-1739f80a="" class="link-header"> Divinitor </div>
+                  <div data-v-1739f80a="" class="link">
+                    <a data-v-1739f80a="" href="https://divinitor.com" target="_blank">Home</a>
+                  </div>
+                  <div data-v-1739f80a="" class="link">
+                    <a data-v-1739f80a="" href="https://www.patreon.com/divinitor" target="_blank">Patreon</a>
+                  </div>
+                  <div data-v-1739f80a="" class="link">
+                    <a data-v-1739f80a="" href="https://discord.gg/BeqJcCq" target="_blank">Discord</a>
+                  </div>
+                  <div data-v-1739f80a="" class="link">
+                    <a data-v-1739f80a="" href="https://blog.divinitor.com" target="_blank">Blog</a>
+                  </div>
+                  <div data-v-1739f80a="" class="link">
+                    <a data-v-1739f80a="" href="https://labs.divinitor.com" target="_blank">Labs</a>
+                  </div>
+                </div>
+              </div>
+              <div data-v-1739f80a="" class="mobile-only">
+                <div data-v-1739f80a="" class="menu-icon">
+                  <i data-v-1739f80a="" class="fa fa-navicon"></i>
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="auth-box">
+          <div data-v-30222694="" class="site-auth-header">
+            
+            </div>
+          </div>
+        </div>
+        <div class="region-indicator">
+          <div data-v-4f32b89c="" class="locale-select">
+            <div data-v-4f32b89c="" class="selector">
+              <i data-v-4f32b89c="" class="fa fa-globe"></i> Version 1.5.7
+            </div>
+            <!---->
+          </div>
+        </div>
+        <!---->
+        <div class="appbody">
+          <!---->
+          <div class="flex-box">
+            <div class="left-pane mobile-hide">
+              <div data-v-1739f80a="" class="nav">
+                <div data-v-1739f80a="" class="mobile-hide">
+                  <h1 data-v-1739f80a="">Navigation</h1>
+                  <ul data-v-1739f80a="">
+                    <a data-v-1739f80a="" href="/" class="">
+                      <li data-v-1739f80a="">Home</li>
+                    </a>
+                    <a data-v-1739f80a="" href="/Class/class.html" class="router-link-exact-active router-link-active">
+                      <li data-v-1739f80a="">Classes</li>
+                      <a data-v-1739f80a="" href="/videos" class="">
+                        <li data-v-1739f80a="">Videos</li>
+                      </a>
+                      <a data-v-1739f80a="" href="/skills/skillSim" class="">
+                        <li data-v-1739f80a="" class="new">Skill Sim (BETA)</li>
+                      </a>
+                      <a data-v-1739f80a="" href="/resources" class="">
+                        <li data-v-1739f80a="">Resources</li>
+                      </a>
+                  </ul>
+                  <div data-v-1739f80a="" class="related-links">
+                    <!---->
+                    <div data-v-1739f80a="" class="link">
+                      <a data-v-1739f80a="" href="https://fatduckdn.com/" target="_blank">Home</a>
+                    </div>
+                    <div data-v-1739f80a="" class="link">
+                      <a data-v-1739f80a="" href="https://discord.gg/XFcyMqE" target="_blank">Discord</a>
+                    </div>
+                    <div data-v-1739f80a="" class="link-header"> Divinitor </div>
+                    <div data-v-1739f80a="" class="link">
+                      <a data-v-1739f80a="" href="https://divinitor.com" target="_blank">Home</a>
+                    </div>
+                    <div data-v-1739f80a="" class="link">
+                      <a data-v-1739f80a="" href="https://www.patreon.com/divinitor" target="_blank">Patreon</a>
+                    </div>
+                    <div data-v-1739f80a="" class="link">
+                      <a data-v-1739f80a="" href="https://discord.gg/BeqJcCq" target="_blank">Discord</a>
+                    </div>
+                    <div data-v-1739f80a="" class="link">
+                      <a data-v-1739f80a="" href="https://blog.divinitor.com" target="_blank">Blog</a>
+                    </div>
+                    <div data-v-1739f80a="" class="link">
+                      <a data-v-1739f80a="" href="https://labs.divinitor.com" target="_blank">Labs</a>
+                    </div>
+                  </div>
+                </div>
+                <div data-v-1739f80a="" class="mobile-only">
+                  <div data-v-1739f80a="" class="menu-icon">
+                    <i data-v-1739f80a="" class="fa fa-navicon"></i>
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="main-pane">
+                <div data-v-cd026710="" class="blank-view">
+                    <div data-v-63ced071="" data-v-cd026710="" class="general">
+                      <h1 data-v-63ced071="" class="divided">CPAR</h1>
+                      <div data-v-63ced071="" class="options-grid">
+                        <a data-v-63ced071="" href="/general/stat" class="option">
+                          <h2 data-v-63ced071="" class="heading"> WEEK 1 <div data-v-63ced071="" class="icon fa fa-book"></div>
+                          </h2>
+                        </a>
+                        <a data-v-63ced071="" href="/general/stat" class="option">
+                            <h2 data-v-63ced071="" class="heading"> WEEK 2 <div data-v-63ced071="" class="icon fa fa-book"></div>
+                            </h2>
+                          </a>
+                          <a data-v-63ced071="" href="/general/stat" class="option">
+                            <h2 data-v-63ced071="" class="heading"> WEEK 3 <div data-v-63ced071="" class="icon fa fa-book"></div>
+                            </h2>
+                          </a>
+                          <a data-v-63ced071="" href="/general/stat" class="option">
+                            <h2 data-v-63ced071="" class="heading"> WEEK 4 <div data-v-63ced071="" class="icon fa fa-book"></div>
+                            </h2>
+                          </a>
+                          <a data-v-63ced071="" href="/general/stat" class="option">
+                            <h2 data-v-63ced071="" class="heading"> WEEK 5 <div data-v-63ced071="" class="icon fa fa-book"></div>
+                            </h2>
+                          </a>
+                          <a data-v-63ced071="" href="/general/stat" class="option">
+                            <h2 data-v-63ced071="" class="heading"> WEEK 6 <div data-v-63ced071="" class="icon fa fa-book"></div>
+                            </h2>
+                          </a>
+                          <a data-v-63ced071="" href="/general/stat" class="option">
+                            <h2 data-v-63ced071="" class="heading"> WEEK 7 <div data-v-63ced071="" class="icon fa fa-book"></div>
+                            </h2>
+                          </a>
+                          <a data-v-63ced071="" href="/general/stat" class="option">
+                            <h2 data-v-63ced071="" class="heading"> WEEK 8 <div data-v-63ced071="" class="icon fa fa-book"></div>
+                            </h2>
+                          </a>
+                          <a data-v-63ced071="" href="/general/stat" class="option">
+                            <h2 data-v-63ced071="" class="heading"> WEEK 9 <div data-v-63ced071="" class="icon fa fa-book"></div>
+                            </h2>
+                          </a>
+                          <a data-v-63ced071="" href="/general/stat" class="option">
+                            <h2 data-v-63ced071="" class="heading"> WEEK 10 <div data-v-63ced071="" class="icon fa fa-book"></div>
+                            </h2>
+                          </a>
+                          <a data-v-63ced071="" href="/general/stat" class="option">
+                            <h2 data-v-63ced071="" class="heading"> WEEK 11 <div data-v-63ced071="" class="icon fa fa-book"></div>
+                            </h2>
+                          </a>
+                          <a data-v-63ced071="" href="/general/stat" class="option">
+                            <h2 data-v-63ced071="" class="heading"> WEEK 12 <div data-v-63ced071="" class="icon fa fa-book"></div>
+                            </h2>
+                          </a>
+
+                      </div>
+                    </div>
+                  </div>
+          </div>
+        </div>
+        
+        <div class="startup" started="true">
+          <div class="container">
+            <div class="sub">Divinitor</div>
+            <div class="title">Minerva</div>
+            <div class="detail">Now loading</div>
+          </div>
+        </div>
+        <div id="tooltip-host"></div>
+      </div>
+      <script defer="" src="../../static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{" token":="" "1732136c540d47febb6449de38575e1e"="" }"=""></script>
+    <script src="../../reference.dn.divinitor.com/js/chunk-vendors.09a054db.js"></script>
+    <script src="../../reference.dn.divinitor.com/js/chunk-common.552368d4.js"></script>
+    <script src="../../reference.dn.divinitor.com/js/index.3e0e286a.js"></script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<script src="chrome-extension://kcgedkeajhbfkackhppmenimpfpnopje/js/app.js" type="text/javascript"></script></body></html>
